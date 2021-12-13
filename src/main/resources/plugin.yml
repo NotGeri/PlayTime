@@ -1,0 +1,37 @@
+name: PlayTime
+main: dev.geri.playtime.PlayTime
+version: 1.0
+api-version: 1.13
+description: Check playtimes of players and have a leaderboard.
+author: Geri
+softdepend: [PlaceholderAPI]
+
+commands:
+  playtime:
+    description: View the playtime of you or another player.
+    permission: playtime.use
+    aliases: [pt]
+  playtop:
+    description: View the playtime leaderboard.
+    permission: playtime.top
+    aliases: [ptop]
+  playtimereload:
+    description: Reloads the PlayTimeStats plugin.
+    permission: playtime.reload
+
+permissions:
+  playtime.use:
+    description: Allow viewing your own play time.
+    default: op
+  playtime.use.other:
+    description: Allow viewing the playtime of another player.
+    default: op
+  playtime.top:
+    description: Allow viewing the playtime leaderboard.
+    default: op
+  playtime.top.unlimited:
+    description: Allow viewing the playtime leaderboard with any amount.
+    default: op
+  playtime.reload:
+    description: Allow using the playtime reload command.
+    default: op
